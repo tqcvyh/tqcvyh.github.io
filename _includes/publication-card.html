@@ -14,16 +14,6 @@
   </a>
 
   <div class="publication-card__content">
-    <div class="publication-card__topline">
-    {% if publication.core_image %}
-      <img
-        src="{{ publication.core_image | prepend: base_path }}"
-        alt="{{ publication.core_image_alt | default: publication.title | escape }}"
-        loading="lazy"
-      >
-    {% endif %}
-    </div>
-
     <h3 class="publication-card__title" itemprop="headline">
       <a href="{{ base_path }}{{ publication.url }}">{{ publication.title }}</a>
     </h3>
