@@ -9,9 +9,9 @@ redirect_from:
 
 Hi & Welcome!
 ======
-I am now a PhD student at **School of Computer Science and Technology, Harbin Insitute of Technology, Shenzhen (HITSZ)**, supervised by Changjiang Distinguished Professor, Prof. Yong Xu.
+I am now a PhD student at **School of Computer Science and Technology, Harbin Insitute of Technology, Shenzhen (HITSZ)**, supervised by Prof. Yong Xu (Changjiang Distinguished Professor).
 
-Before joining HITSZ, I worked as a Researcher & Algorithm Developer at SINOMACH Sensing Technology Co., Ltd under Shenyang Academy of Instrumentation and Science Co., Ltd from 2025 to 2027. 
+Before joining HITSZ, I worked as a Researcher & Algorithm Developer at **SINOMACH Sensing Technology Co., Ltd under Shenyang Academy of Instrumentation and Science Co., Ltd** from 2025 to 2027. 
 
 My research interest includes Deep Learning & Computer Vision in Pipeline Magnetic Flux Leakage Detection and Medical Imaging. And my research topics cover Object Detection, Weakly Supervised Learning and Explainable AI.
 
