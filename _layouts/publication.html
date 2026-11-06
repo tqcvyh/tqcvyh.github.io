@@ -1,58 +1,45 @@
----
-layout: default
----
 {% include base_path %}
 
-<div id="main" role="main">
-  {% include sidebar.html %}
-
-  <article class="archive publication-page" itemscope itemtype="https://schema.org/ScholarlyArticle">
-    <a class="publication-page__back" href="{{ base_path }}/publications/">
-      <i class="fas fa-arrow-left" aria-hidden="true"></i> All publications
-    </a>
-
-    <header class="publication-page__header">
-      <p class="publication-page__badge">{{ page.venue_short | default: "Publication" }}</p>
-      <h1 itemprop="headline">{{ page.title }}</h1>
-      {% if page.authors %}
-        <div class="publication-page__authors" itemprop="author">{{ page.authors | markdownify }}</div>
-      {% endif %}
-    </header>
-
-    <div class="publication-page__showcase">
+<div class="publication-detail">
+  <h1 class="publication-title">{{ page.title }}</h1>
+  
+  {% if page.authors %}
+    <p class="publication-authors">{{ page.authors | markdownify }}</p>
+  {% endif %}
+  
+  <div class="publication-body">
+    <div class="publication-image">
       {% if page.core_image %}
-        <figure class="publication-page__figure">
-          <img src="{{ page.core_image | prepend: base_path }}" alt="{{ page.title | escape }}" itemprop="image">
-        </figure>
+        <img src="{{ page.core_image | prepend: base_path }}" alt="{{ page.title }}">
       {% endif %}
-
-      <aside class="publication-page__facts" aria-label="Publication details">
-        {% if page.venue_logo %}
-          <div class="publication-page__logo-wrap">
-            <img class="publication-page__logo" src="{{ page.venue_logo | prepend: base_path }}" alt="{{ page.venue_short | default: page.venue | strip_html | escape }} logo">
-          </div>
-        {% endif %}
-        <h2>Publication details</h2>
-        <dl>
-          {% if page.venue %}<div><dt><i class="fas fa-book-open" aria-hidden="true"></i></dt><dd itemprop="isPartOf">{{ page.venue }}</dd></div>{% endif %}
-          {% if page.date %}<div><dt><i class="fas fa-calendar" aria-hidden="true"></i></dt><dd><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%B %Y" }}</time></dd></div>{% endif %}
-          {% if page.location %}<div><dt><i class="fas fa-location-dot" aria-hidden="true"></i></dt><dd>{{ page.location }}</dd></div>{% endif %}
-        </dl>
-        {% if page.paperurl or page.slidesurl or page.bibtexurl %}
-          <div class="publication-page__actions">
-            {% if page.paperurl %}<a class="publication-page__button publication-page__button--primary" href="{{ page.paperurl }}"><i class="fas fa-file-pdf" aria-hidden="true"></i> Paper</a>{% endif %}
-            {% if page.slidesurl %}<a class="publication-page__button" href="{{ page.slidesurl }}"><i class="fas fa-person-chalkboard" aria-hidden="true"></i> Slides</a>{% endif %}
-            {% if page.bibtexurl %}<a class="publication-page__button" href="{{ page.bibtexurl }}"><i class="fas fa-quote-right" aria-hidden="true"></i> BibTeX</a>{% endif %}
-          </div>
-        {% endif %}
-      </aside>
     </div>
 
-    {% if page.excerpt or content != empty %}
-      <section class="publication-page__section" itemprop="description">
-        {% if page.excerpt %}{{ page.excerpt | markdownify }}{% endif %}
-        {{ content }}
-      </section>
-    {% endif %}
-  </article>
+    <div class="publication-info">
+      <div class="info-text">
+        <p class="venue-name">{{ page.venue }}</p>
+        <p class="venue-location">{{ page.date | date: "%Y.%m.%d" }}, {{ page.location }}</p>
+      </div>
+      {% if page.venue_logo %}
+        <img class="venue-logo" src="{{ page.venue_logo | prepend: base_path }}" alt="{{ page.venue }}">
+      {% endif %}
+    </div>
+  </div>
+  
+  {% if page.excerpt %}
+    <div class="publication-excerpt">
+      {{ page.excerpt | markdownify }}
+    </div>
+  {% endif %}
+  
+  {% if page.paperurl %}
+    <p class="publication-links">
+      <a href="{{ page.paperurl }}" class="btn btn--primary">
+        <i class="fa fa-file-pdf" aria-hidden="true"></i> Download Paper
+      </a>
+    </p>
+  {% endif %}
+  
+  <div class="publication-content">
+    {{ content }}
+  </div>
 </div>
