@@ -14,10 +14,18 @@ html[data-theme="dark"] {
   --academic-surface: #3d3d3d;
 }
 
-.about-content > p {
-  text-align: justify;
-  text-justify: inter-word;
-  hyphens: auto;
+@media (min-width: $large) {
+  .sidebar {
+    width: 180px;
+    margin-right: 0;
+  }
+
+  .archive,
+  .publication-page {
+    float: right;
+    width: calc(100% - 220px);
+    padding-left: 0;
+  }
 }
 
 .academic-home {
