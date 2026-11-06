@@ -14,32 +14,6 @@ html[data-theme="dark"] {
   --academic-surface: #3d3d3d;
 }
 
-@media (min-width: $large) {
-  .sidebar {
-    width: 180px;
-    margin-right: 0;
-    position: sticky;
-    top: calc(#{$masthead-height} + 1.5rem);
-    height: calc(100vh - #{$masthead-height} - 1.5rem);
-    overflow-y: auto;
-  }
-
-  .archive,
-  .publication-page {
-    float: right;
-    width: calc(100% - 220px);
-    padding-left: 0;
-  }
-}
-
-/* The standard theme fixes the sidebar at 1024px while the page continues to
-   use a float layout. Keep it in the same layout flow at every desktop width. */
-@media (min-width: $sidebar-screen-min-width) {
-  .sidebar {
-    position: sticky;
-  }
-}
-
 .about-content > p {
   text-align: justify;
   text-justify: inter-word;
