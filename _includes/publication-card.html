@@ -25,11 +25,11 @@
     {% endif %}
 
     <div class="publication-card__venue">
-      {% if publication.venue %}<span>{{ publication.venue }}</span>{% endif %}
+      {% if publication.venue %}<div class="publication-card__venue-name">{{ publication.venue }}</div>{% endif %}
       {% if publication.location %}
-        <span class="publication-card__location">
+        <div class="publication-card__location">
           {{ publication.location }}
-        </span>
+        </div>
       {% endif %}
     </div>
   </div>
