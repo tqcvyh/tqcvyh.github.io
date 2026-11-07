@@ -48,6 +48,33 @@
   }
 }
 
+/* Keep publication card metadata evenly spaced even though the title, authors,
+   venue, and location are rendered with different HTML elements. */
+.publication-card__title {
+  margin: 0 0 0.55rem;
+  line-height: 1.45;
+}
+
+.publication-card__authors {
+  margin: 0 0 0.55rem;
+  line-height: 1.5;
+
+  p {
+    margin: 0;
+  }
+}
+
+.publication-card__venue {
+  margin: 0;
+  line-height: 1.5;
+}
+
+.publication-card__venue-name,
+.publication-card__location {
+  display: block;
+  margin: 0;
+}
+
 /* remove border*/
 .page__content {
 
