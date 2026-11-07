@@ -155,7 +155,7 @@ html[data-theme="dark"] {
   font-size: 0.8rem;
   line-height: 1.45;
 
-  > span:first-child {
+  > .publication-card__venue-name {
     color: var(--global-text-color);
     font-weight: 650;
   }
