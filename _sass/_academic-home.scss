@@ -481,7 +481,8 @@ html[data-theme="dark"] .award-card__badge {
   display: grid;
   grid-template-columns: 145px minmax(0, 1fr);
   padding-left: 1.5rem;
-  gap: 1rem;
+  gap: 0.2rem 1rem;
+  align-items: baseline;
 
   &::before {
     position: absolute;
@@ -499,18 +500,20 @@ html[data-theme="dark"] .award-card__badge {
 
 .cv-entry__date,
 .cv-uniform-item__meta {
-  padding-top: 0.05rem;
+  padding-top: 0;
+  margin: 0;
   color: #8c5730;
   font-size: 0.71rem;
   font-weight: 800;
   font-variant-numeric: tabular-nums;
   letter-spacing: 0.025em;
+  line-height: 1.4;
 }
 
 .cv-entry__body,
 .cv-uniform-item__body {
   h4 {
-    margin: 0 0 0.25rem;
+    margin: 0 0 0.2rem;
     color: var(--global-text-color);
     font-size: 0.84rem;
     font-weight: 760;
@@ -518,7 +521,7 @@ html[data-theme="dark"] .award-card__badge {
   }
 
   p {
-    margin: 0.12rem 0 0;
+    margin: 0.05rem 0 0;
     color: var(--academic-muted);
     font-size: 0.74rem;
     line-height: 1.5;
@@ -532,7 +535,7 @@ html[data-theme="dark"] .award-card__badge {
   }
 
   .cv-entry__detail {
-    margin-top: 0.45rem;
+    margin-top: 0.15rem;
     font-size: 0.72rem;
   }
 }
@@ -567,8 +570,9 @@ html[data-theme="dark"] .award-card__badge {
 .cv-uniform-item {
   display: grid;
   grid-template-columns: 76px minmax(0, 1fr);
-  padding: 0.8rem 0;
-  gap: 0.8rem;
+  padding: 0.55rem 0;
+  gap: 0.2rem 0.8rem;
+  align-items: baseline;
   border-top: 1px solid var(--global-border-color);
 
   &:first-child {
@@ -722,7 +726,12 @@ html[data-theme="dark"] .award-card__badge {
 
   .cv-entry {
     grid-template-columns: 1fr;
-    gap: 0.28rem;
+    gap: 0.15rem;
+  }
+
+  .cv-uniform-item {
+    grid-template-columns: 1fr;
+    gap: 0.15rem;
   }
 
   .cv-plain-list {
