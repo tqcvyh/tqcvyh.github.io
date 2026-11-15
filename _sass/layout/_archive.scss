@@ -80,64 +80,13 @@
   margin: 0;
 }
 
-/* Match CV entry headings to the section-heading size without changing dates or spacing. */
+/* CV dates and every entry heading use the same visual size. */
+.cv-entry__date,
+.cv-uniform-item__meta,
 .cv-entry__body h4,
 .cv-uniform-item__body h4 {
-  margin: 0 0 0.9rem;
-  font-size: 1em;
+  font-size: 0.875rem;
   line-height: 1.4;
-}
-
-.cv-entry__date,
-.cv-uniform-item__meta {
-  display: block;
-  margin: 0 0 0.9rem;
-  font-size: 1em;
-  line-height: 1.4;
-}
-
-.cv-entry__body p,
-.cv-uniform-item__body p {
-  margin: 0 0 0.9rem;
-}
-
-/* Use one vertical rhythm throughout the CV. */
-.cv-page {
-  --cv-row-gap: 0.9rem;
-}
-
-.cv-page .cv-block {
-  margin: 0 0 1.8rem;
-}
-
-.cv-page .cv-block__heading h3 {
-  margin: 0 0 var(--cv-row-gap);
-  font-size: 1em;
-  line-height: 1.4;
-}
-
-.cv-page .cv-entry,
-.cv-page .cv-uniform-item {
-  margin: 0;
-}
-
-.cv-page .cv-plain-list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.cv-page .cv-plain-list li {
-  margin: 0 0 var(--cv-row-gap);
-}
-
-.cv-page .cv-entry__date,
-.cv-page .cv-uniform-item__meta,
-.cv-page .cv-entry__body h4,
-.cv-page .cv-uniform-item__body h4,
-.cv-page .cv-entry__body p,
-.cv-page .cv-uniform-item__body p {
-  margin-bottom: var(--cv-row-gap);
 }
 
 /* remove border*/
