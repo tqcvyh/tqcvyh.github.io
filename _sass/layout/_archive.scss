@@ -83,9 +83,22 @@
 /* Match CV entry headings to the section-heading size without changing dates or spacing. */
 .cv-entry__body h4,
 .cv-uniform-item__body h4 {
-  margin: 0 0 0.25rem;
+  margin: 0 0 0.9rem;
   font-size: 1em;
   line-height: 1.4;
+}
+
+.cv-entry__date,
+.cv-uniform-item__meta {
+  display: block;
+  margin: 0 0 0.9rem;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+.cv-entry__body p,
+.cv-uniform-item__body p {
+  margin: 0 0 1em;
 }
 
 /* remove border*/
