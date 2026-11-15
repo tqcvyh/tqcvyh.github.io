@@ -98,7 +98,46 @@
 
 .cv-entry__body p,
 .cv-uniform-item__body p {
-  margin: 0 0 1em;
+  margin: 0 0 0.9rem;
+}
+
+/* Use one vertical rhythm throughout the CV. */
+.cv-page {
+  --cv-row-gap: 0.9rem;
+}
+
+.cv-page .cv-block {
+  margin: 0 0 1.8rem;
+}
+
+.cv-page .cv-block__heading h3 {
+  margin: 0 0 var(--cv-row-gap);
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+.cv-page .cv-entry,
+.cv-page .cv-uniform-item {
+  margin: 0;
+}
+
+.cv-page .cv-plain-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cv-page .cv-plain-list li {
+  margin: 0 0 var(--cv-row-gap);
+}
+
+.cv-page .cv-entry__date,
+.cv-page .cv-uniform-item__meta,
+.cv-page .cv-entry__body h4,
+.cv-page .cv-uniform-item__body h4,
+.cv-page .cv-entry__body p,
+.cv-page .cv-uniform-item__body p {
+  margin-bottom: var(--cv-row-gap);
 }
 
 /* remove border*/
